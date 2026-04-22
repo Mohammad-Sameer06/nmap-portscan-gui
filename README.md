@@ -1,77 +1,61 @@
-# Network Port Scanner GUI
+Network Port Scanner GUI 🛡️
+A high-performance, multi-threaded TCP port scanner featuring a professional graphical user interface. This project was developed to apply core network reconnaissance and security principles gained during my Cybersecurity Virtual Internship with the Vodafone Idea Foundation and Edunet Foundation.
 
-A lightweight TCP port scanner with a graphical user interface built with Python and Tkinter.
+📋 Overview
+Understanding open ports and services is a fundamental step in network security auditing. This tool provides a clean, professional interface to identify active services on a target host efficiently. By integrating multi-threading, it allows for rapid scanning that mimics real-world security tools while remaining lightweight and dependency-free.
 
-## Features
+✨ Features
+Multi-threaded Engine: Supports up to 500 concurrent threads for near-instantaneous results across wide port ranges.
 
-- **Simple 3-field interface** – enter a target host, start port, and end port
-- **Multi-threaded scanning** – up to 500 concurrent threads for fast results
-- **Service identification** – automatically labels well-known ports (FTP, SSH, HTTP, HTTPS, MySQL, RDP, etc.)
-- **Real-time progress** – progress bar and elapsed-time counter update live during a scan
-- **Stop at any time** – cancel a running scan gracefully
-- **Save results** – export discovered open ports to a `.txt` file
-- **Cross-platform** – runs on Windows, macOS, and Linux
+Service Mapping: Automatically identifies and labels common services (SSH, FTP, HTTP, MySQL, RDP, etc.).
 
-## Requirements
+Professional UI: A clean, minimal Tkinter interface featuring a real-time progress bar and elapsed-time tracking.
 
-- Python 3.7 or newer
-- Tkinter (included in the standard Python distribution; on Debian/Ubuntu install `python3-tk`)
+Session Management: Ability to gracefully stop a running scan and export results to a .txt file for further analysis.
 
-No third-party packages are required.
+Cross-platform: Fully compatible with Windows, macOS, and Linux environments.
 
-## Installation
+🛠️ Technical Stack
+Language: Python 3.7+
 
-```bash
+GUI Framework: Tkinter (Standard Library)
+
+Networking: Socket programming
+
+Concurrency: Threading module
+
+🚀 Getting Started
+Prerequisites
+Python 3.7 or newer.
+
+Tkinter (usually bundled with Python; on Linux, install via sudo apt-get install python3-tk).
+
+Installation
+Bash
 git clone https://github.com/techtrainer20/nmap_portscan_gui.git
 cd nmap_portscan_gui
-```
-
-## Usage
-
-```bash
+Usage
+Bash
 python portscanergui.py
-```
+Enter the Target IP or Hostname.
 
-1. Enter the **Target** – an IP address (e.g. `192.168.1.1`) or hostname (e.g. `scanme.nmap.org`).
-2. Set the **Start Port** and **End Port** (defaults: `1` – `1024`).
-3. Click **Start Scan**. Open ports appear in real time in the results pane.
-4. Click **Stop** to cancel a scan early.
-5. After a scan completes, click **Save Results** to write the open-port list to a text file.
+Define the Start and End port range.
 
-## Detected Services
+Click Start Scan to begin the reconnaissance process.
 
-The following ports are automatically labelled:
+🛡️ Internship Context
+This project serves as a practical implementation of the concepts explored during my March–April 2026 Cybersecurity Internship. It focuses on:
 
-| Port | Service   |
-|------|-----------|
-| 21   | FTP       |
-| 22   | SSH       |
-| 23   | Telnet    |
-| 25   | SMTP      |
-| 53   | DNS       |
-| 80   | HTTP      |
-| 110  | POP3      |
-| 143  | IMAP      |
-| 443  | HTTPS     |
-| 3306 | MySQL     |
-| 3389 | RDP       |
-| 5900 | VNC       |
-| 8080 | HTTP-Alt  |
+Network layer communication and TCP handshakes.
 
-Ports not in the list are reported as `Unknown`.
+Identifying potential attack vectors through open ports.
 
-## Project Structure
+Automating security tasks to improve response times.
 
-```
-nmap_portscan_gui/
-├── portscanergui.py   # Main application (scanner + GUI)
-└── README.md
-```
+⚖️ License & Disclaimer
+This project is released under the MIT License.
 
-## Disclaimer
+Warning: This tool is intended for educational purposes and authorized security testing only. Unauthorized scanning of networks is illegal and unethical. Use responsibly.
 
-Use this tool only on hosts and networks you own or have explicit permission to scan. Unauthorized port scanning may be illegal in your jurisdiction.
 
-## License
-
-This project is released under the [MIT License](https://opensource.org/licenses/MIT).
+Developed by Mohammad Sameer 2nd Year B.Tech Student in Computer Science & Engineering
